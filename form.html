@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulir Pendaftaran Mahasiswa Baru</title>
+  <style>
+    /* Reset dasar */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    /* Latar belakang hijau muda dan warna teks */
+    body {
+      background-color: #ccffcc; /* Hijau muda */
+      color: #333;
+    }
+    /* Kontainer di tengah dengan background putih */
+    .container {
+      width: 80%;
+      max-width: 700px;
+      margin: 50px auto;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+    /* Judul Formulir */
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    /* Label dan input */
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 14px;
+    }
+    textarea {
+      resize: vertical;
+      height: 80px;
+    }
+    /* Radio Button - tampil sejajar */
+    .radio-group {
+      margin-top: 5px;
+    }
+    .radio-group input[type="radio"] {
+      margin-right: 5px;
+    }
+    /* Tombol Submit */
+    input[type="submit"] {
+      background-color: #27ae60;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      margin-top: 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    input[type="submit"]:hover {
+      background-color: #2ecc71;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Formulir Pendaftaran Mahasiswa Baru</h1>
+    <form action="submit_registration.php" method="POST">
+      <!-- Nama Lengkap -->
+      <label for="name">Nama Lengkap:</label>
+      <input type="text" id="name" name="name" required>
+
+      <!-- Email -->
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <!-- Nomor Telepon -->
+      <label for="phone">Nomor Telepon:</label>
+      <input type="tel" id="phone" name="phone" required>
+
+      <!-- Jenis Kelamin -->
+      <label for="program">Jenis Kelamin:</label>
+      <select id="program" name="program" required>
+        <option value="">-- Pilih Jenis Kelamin--</option>
+        <option value="Sistem Informasi">Laki-laki</option>
+        <option value="Teknik Informatika">Perempuan</option>
+        <option value="Teknik Komputer">Khusus</option>
+        <!-- Tambahkan opsi lain jika diperlukan -->
+      </select>
+
+      <!-- Program Studi -->
+      <label for="program">Program Studi:</label>
+      <select id="program" name="program" required>
+        <option value="">-- Pilih Program Studi --</option>
+        <option value="Sistem Informasi">Teknik Sipil</option>
+        <option value="Teknik Informatika">Teknik Informatika</option>
+        <option value="Teknik Komputer">Perencanaan Wilayah dan Kota</option>
+        <option value="Teknik Elektro">Sistem Informasi</option>
+        <option value="Teknik Elektro">Arsitektur</option>
+        <!-- Tambahkan opsi lain jika diperlukan -->
+      </select>
+
+      <!-- Alamat -->
+      <label for="address">Alamat:</label>
+      <input type="text" id="address" name="address" required>
+
+      <!-- Asal Sekolah -->
+      <label for="school">Asal Sekolah:</label>
+      <input type="text" id="school" name="school" required>
+
+      <!-- Pesan -->
+      <label for="message">Pesan/Alasan Pendaftaran:</label>
+      <textarea id="message" name="message" placeholder="Tuliskan alasan Anda ingin mendaftar di program ini" required></textarea>
+
+      <!-- Unggah Foto -->
+      <label for="photo">Unggah Foto (JPG/PNG):</label>
+      <input type="file" id="photo" name="photo" accept="image/jpeg, image/png" required>
+
+
+      <!-- Tombol Submit -->
+      <input type="submit" value="Kirim Pendaftaran">
+
+       <!-- Link Kembali -->
+       <p align="left">
+        <a href="index.html">Kembali ke Beranda</a> |
+        <a href="profile.html">Profil Admin</a>
+      </p>
+    </form>
+  </div>
+
+</body>
+</html>

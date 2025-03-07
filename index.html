@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda - Sistem Informasi Fakultas Teknik Universitas Sulawesi Barat</title>
+    <!-- Menggunakan font Poppins dari Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Reset dan font dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Bagian Header */
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative; /* Agar logo bisa di-posisi-kan absolute */
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.2em;
+            font-weight: 400;
+        }
+
+        /* Logo Universitas di pojok kanan atas */
+        .logo-univ {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            width: 60px;     /* Sesuaikan ukuran logo */
+            height: auto;    /* Agar proporsi logo tetap terjaga */
+        }
+
+        /* Bagian Navigasi */
+        nav {
+            background-color: #fff;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: #4CAF50;
+            color: #fff;
+            transition: 0.3s;
+        }
+
+        /* Bagian Konten Utama */
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+
+        .container p {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 40px;
+        }
+
+        /* Bagian Footer */
+        footer {
+            background-color: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed; 
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            font-size: 0.9em;
+        }
+
+        /* Link untuk scroll (opsional) */
+        a.scroll-link {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 1em;
+            color: #4CAF50;
+            text-decoration: none;
+        }
+
+        a.scroll-link:hover {
+            color: #2e7d32;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <!-- Tambahkan logo universitas di pojok kanan -->
+        <img src="Picture1.jpg" alt="Logo Universitas" class="logo-univ">
+
+        <h1>Selamat Datang di Sistem Informasi</h1>
+        <p>Fakultas Teknik Universitas Sulawesi Barat</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="profileadmin.html">Profil</a></li>
+            <li><a href="form.html">Pendaftaran</a></li>
+            <li><a href="contact.html">Kontak</a></li>
+            <li><a href="about.html">Tentang</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <h2>Program Studi Sistem Informasi</h2>
+        <p>
+            Program studi yang bertujuan untuk menghasilkan lulusan yang kompeten di bidang teknologi informasi 
+            dan sistem informasi dengan kemampuan analisis yang kuat serta kemampuan praktis dalam pemanfaatan 
+            teknologi untuk memecahkan masalah.
+        </p>
+
+        <!-- Link scroll ke bawah, jika diinginkan -->
+        <a href="#footer" class="scroll-link"></a>
+    </div>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>Copyright © 2025 Universitas Sulawesi Barat. All rights reserved.</p>
+    <div id="footer">
+        <p><a href="https://sisfo.ft.unsulbar.ac.id/" target="_blank">Sistem Informasi Fakultas Teknik Unsulbar</a></p>
+    </div>
+</footer>
+</body>
+</html>

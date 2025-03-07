@@ -1,0 +1,222 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard - Pendaftaran Mahasiswa Baru</title>
+  <style>
+    /* ===== Reset & Dasar ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background-color: #ccffcc; /* Hijau muda */
+      color: #333;
+    }
+
+    /* ===== Header ===== */
+    header {
+      position: relative;
+      padding: 20px;
+      text-align: center;
+      background-color: #2ecc71;
+      color: #fff;
+    }
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 5px;
+    }
+    header p {
+      font-size: 16px;
+    }
+
+    /* Foto profil di kanan atas */
+    .profile-photo {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #fff;
+    }
+
+    /* ===== Container Utama ===== */
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 30px auto;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+
+    /* ===== Biodata Admin (kiri) ===== */
+    .admin-biodata {
+      /* Hilangkan text-align: center dan ubah menjadi left */
+      text-align: left; 
+      margin-bottom: 30px;
+    }
+    .admin-biodata h2 {
+      margin-bottom: 10px;
+      font-size: 24px;
+      color: #27ae60;
+    }
+    .admin-biodata ul {
+      list-style: none;
+      margin-top: 10px;
+      font-size: 16px;
+      color: #555;
+      padding-left: 0; /* Hilangkan padding default */
+    }
+    .admin-biodata li {
+      margin: 5px 0;
+    }
+
+    /* ===== Tabel Manajemen Mahasiswa ===== */
+    .table-section h3 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: #27ae60;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th, td {
+      text-align: left;
+      padding: 12px;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #2ecc71;
+      color: #fff;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    /* ===== Tombol Aksi ===== */
+    .action-btn {
+      text-decoration: none;
+      color: #fff;
+      background-color: #3498db;
+      padding: 6px 12px;
+      border-radius: 4px;
+      margin-right: 5px;
+      font-size: 14px;
+    }
+    .action-btn:hover {
+      background-color: #2980b9;
+    }
+    .delete-btn {
+      background-color: #e74c3c;
+    }
+    .delete-btn:hover {
+      background-color: #c0392b;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #2ecc71;
+      color: #fff;
+      border-radius: 0 0 10px 10px;
+      margin-top: -10px; /* menutupi border-radius container agar rapi */
+    }
+    footer p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Admin Dashboard</h1>
+    <p>Pendaftaran Mahasiswa Baru</p>
+    <!-- Foto Profil di pojok kanan atas -->
+    <img src="serlia.jpg" alt="Foto Profil Admin" class="profile-photo">
+  </header>
+
+  <!-- Konten Utama -->
+  <div class="container">
+
+    <!-- Biodata Admin di kiri -->
+    <div class="admin-biodata">
+      <h2>Data Admin</h2>
+      <ul>
+        <li><strong>Nama:</strong> Serlia Turu Allo</li>
+        <li><strong>NIM:</strong> D0424312</li>
+        <li><strong>Prodi:</strong> Sistem Informasi</li>
+        <li><strong>Fakultas:</strong> Teknik</li>
+        <li><strong>Universitas:</strong> Universitas Sulawesi Barat</li>
+      </ul>
+    </div>
+
+    <!-- Tabel Manajemen Mahasiswa -->
+    <div class="table-section">
+      <h3>Data Mahasiswa Baru</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Nama</th>
+            <th>Email</th>
+            <th>Nomor Telepon</th>
+            <th>Alamat</th>
+            <th>Asal Sekolah</th>
+            <th>Foto</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Contoh data statis, nanti bisa diganti dari database/backend -->
+          <tr>
+            <td>A</td>
+            <td>B</td>
+            <td>C</td>
+            <td>D</td>
+            <td>E</td>
+            <td><a href="uploads/mahasiswaA_foto.jpg" target="_blank">Lihat Foto</a></td>
+            <td>
+              <a href="#" class="action-btn">Edit</a>
+              <a href="#" class="action-btn delete-btn">Hapus</a>
+            </td>
+          </tr>
+          <tr>
+            <td>A</td>
+            <td>B</td>
+            <td>C</td>
+            <td>D</td>
+            <td>E</td>
+            <td><a href="uploads/mahasiswaB_foto.jpg" target="_blank">Lihat Foto</a></td>
+            <td>
+              <a href="#" class="action-btn">Edit</a>
+              <a href="#" class="action-btn delete-btn">Hapus</a>
+            </td>
+          </tr>
+          <!-- Tambahkan baris lain sesuai kebutuhan -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Universitas Sulawesi Barat - Semua Hak Dilindungi.</p>
+    <p>
+            <a href="index.html">Kembali ke Beranda</a> |
+            <a href="profile.html">Profile</a>
+        </p>
+        <p><a href="https://sisfo.ft.unsulbar.ac.id/" target="_blank">Sistem Informasi Fakultas Teknik Unsulbar</a></p>
+    </p>
+  </footer>
+
+</body>
+</html>
